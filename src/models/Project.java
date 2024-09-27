@@ -1,16 +1,28 @@
 package models;
 
-public class Project {
+import java.io.Serializable;
+
+public class Project implements Serializable {
+    private int id;
     private String projectName;
     private String projectOwner;
     private int numberOfMember;
 
     public Project() {}
 
-    public Project(String projectName, String projectOwner, int numberOfMember) {
+    public Project(int id, String projectName, String projectOwner, int numberOfMember) {
+        this.id = id;
         this.projectName = projectName;
         this.projectOwner = projectOwner;
         this.numberOfMember = numberOfMember;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getProjectName() {
@@ -40,7 +52,8 @@ public class Project {
     @Override
     public String toString() {
         return "Project{" +
-                "projectName='" + projectName + '\'' +
+                "id=" + id +
+                ", projectName='" + projectName + '\'' +
                 ", projectOwner='" + projectOwner + '\'' +
                 ", numberOfMember=" + numberOfMember +
                 '}';

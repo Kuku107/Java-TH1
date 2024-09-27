@@ -6,9 +6,9 @@ public class HibernateProject extends Project{
 
     public HibernateProject() {}
 
-    public HibernateProject(String projectName, String projectOwner, int numberOfMember,
+    public HibernateProject(int id, String projectName, String projectOwner, int numberOfMember,
                             String version, String description) {
-        super(projectName, projectOwner, numberOfMember);
+        super(id, projectName, projectOwner, numberOfMember);
         this.version = version;
         this.description = description;
     }

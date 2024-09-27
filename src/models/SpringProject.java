@@ -6,9 +6,9 @@ public class SpringProject extends Project {
 
     public SpringProject() {}
 
-    public SpringProject(String projectName, String projectOwner, int numberOfMember,
+    public SpringProject(int id, String projectName, String projectOwner, int numberOfMember,
                          String version, String description) {
-        super(projectName, projectOwner, numberOfMember);
+        super(id, projectName, projectOwner, numberOfMember);
         this.version = version;
         this.description = description;
     }
